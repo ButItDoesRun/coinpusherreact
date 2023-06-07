@@ -1,19 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { useState, useEffect, useContext, Component} from 'react';
+import React, { useState} from 'react';
 import {
-    Routes, Route, Link, NavLink, useParams, Outlet, Navigate
+    Routes, Route, Navigate
 } from "react-router-dom";
-//import Nav from 'react-bootstrap/Nav';
-//import Navbar from 'react-bootstrap/Navbar';
 import PlayerContext from './Context/PlayerContext';
 
 //page imports
 import LoginPage from './Pages/LoginPage';
-//import GamePage from './Pages/GamePage';
 import UnityGame from "./UnityGame";
-//import LogoutPage from "./Pages/LogoutPage";
-//import RegisterPage from "./Pages/RegisterPage";
-
 
 
 const Error = () =>
@@ -27,13 +21,11 @@ const AppRouting = () => {
                 <Routes>
                     {/* Routing for startpage */}           
                     <Route path="/casino/login" element={<LoginPage playerSetter={setPlayer}/>} />
-                    <Route path="/" element={<Navigate replace to="/casino/login" />} />
+                    <Route path="/" element={<Navigate replace to="/casino/login" />} />                               
+                
 
+                    <Route path="/casino/game" element={<UnityGame player = {player}></UnityGame>}/>
                    
-                    
-
-                    <Route path="/casino/game" element={<UnityGame></UnityGame>}/>
-                    
 
 
                     {/* Routing for errors*/}
