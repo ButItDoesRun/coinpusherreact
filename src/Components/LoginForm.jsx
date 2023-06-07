@@ -1,6 +1,8 @@
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
+import { useState} from 'react';
 
 const LoginForm = ({ playername, setPlayername, password, setPassword }) => {
         return (

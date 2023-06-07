@@ -9,6 +9,8 @@ import PlayerContext from './Context/PlayerContext';
 
 //page imports
 import LoginPage from './Pages/LoginPage';
+//import GamePage from './Pages/GamePage';
+import UnityGame from "./UnityGame";
 //import LogoutPage from "./Pages/LogoutPage";
 //import RegisterPage from "./Pages/RegisterPage";
 
@@ -26,7 +28,11 @@ const AppRouting = () => {
                     {/* Routing for startpage */}           
                     <Route path="/casino/login" element={<LoginPage playerSetter={setPlayer}/>} />
                     <Route path="/" element={<Navigate replace to="/casino/login" />} />
-                    <Route path="/casino/game" element={"test"}/>
+
+                   
+                    
+
+                    <Route path="/casino/game" element={<UnityGame></UnityGame>}/>
                     
 
 
